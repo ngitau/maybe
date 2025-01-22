@@ -87,6 +87,7 @@ group :development, :test do
   gem "i18n-tasks"
   gem "erb_lint"
   gem "dotenv-rails"
+  gem "kamal", require: false
 end
 
 if ENV["BENCHMARKING_ENABLED"]
