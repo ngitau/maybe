@@ -1,3 +1,5 @@
+<% require "dotenv"; Dotenv.load('.env.production', '.env') %>
+
 # Name of your application. Used to uniquely configure containers.
 service: my-app
 
