@@ -46,12 +46,14 @@ builder:
 #
 env:
   secret:
-    - RAILS_MASTER_KEY
     - DB_HOST
     - DB_PORT
     - POSTGRES_DB
     - POSTGRES_USER
     - POSTGRES_PASSWORD
+    - RAILS_MASTER_KEY
+    - SELF_HOSTED
+    - SYNTH_API_KEY
 
 # Aliases are triggered with "bin/kamal <alias>". You can overwrite arguments on invocation:
 # "bin/kamal logs -r job" will tail logs from the first server in the job section.
