@@ -282,7 +282,6 @@ GEM
     launchy (3.1.1)
       addressable (~> 2.8)
       childprocess (~> 5.0)
-      logger (~> 1.6)
     letter_opener (1.10.0)
       launchy (>= 2.2, < 4)
     lint_roller (1.1.0)
@@ -345,7 +344,7 @@ GEM
       net-protocol
     net-protocol (0.2.2)
       timeout
-    net-scp (4.0.0)
+    net-scp (4.1.0)
       net-ssh (>= 2.6.5, < 8.0.0)
     net-sftp (4.0.0)
       net-ssh (>= 5.0.0, < 8.0.0)
