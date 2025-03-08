@@ -49,14 +49,20 @@ env:
     - APP_DOMAIN
     - DB_HOST
     - DB_PORT
+    - EMAIL_SENDER
     - POSTGRES_DB
     - POSTGRES_USER
     - POSTGRES_PASSWORD
     - RAILS_MASTER_KEY
     - SELF_HOSTED
-    - SYNTH_API_KEY
     - SENTRY_DSN
     - SENTRY_RELEASE
+    - SMTP_ADDRESS
+    - SMTP_PASSWORD
+    - SMTP_PORT
+    - SMTP_TLS_ENABLED
+    - SMTP_USERNAME
+    - SYNTH_API_KEY
 
 # Aliases are triggered with "bin/kamal <alias>". You can overwrite arguments on invocation:
 # "bin/kamal logs -r job" will tail logs from the first server in the job section.
