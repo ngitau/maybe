@@ -108,9 +108,9 @@ accessories:
       - data:/var/lib/postgresql/data
     files:
       - db/production_setup.sql:/docker-entrypoint-initdb.d/setup.sql
-#   redis:
-#     image: valkey/valkey:8
-#     host: 192.168.0.2
-#     port: 6379
-#     directories:
-#       - data:/data
+  redis:
+    image: valkey/valkey:8
+    host: <%= ENV['APP_HOST'] %>
+    port: "127.0.0.1:6379:6379"
+    directories:
+      - data:/data
