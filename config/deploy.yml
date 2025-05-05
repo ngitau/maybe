@@ -58,6 +58,7 @@ env:
     - SELF_HOSTED
     - SENTRY_DSN
     - SENTRY_RELEASE
+    - SIDEKIQ_WEB_PASSWORD
     - SMTP_ADDRESS
     - SMTP_PASSWORD
     - SMTP_PORT
@@ -112,6 +113,10 @@ accessories:
   redis:
     image: valkey/valkey:8
     host: <%= ENV['APP_HOST'] %>
+    cmd: "/bin/sh -c 'redis-server --protected-mode yes --bind 0.0.0.0 --requirepass $SIDEKIQ_WEB_PASSWORD'"
+    env:
+      secret:
+        - SIDEKIQ_WEB_PASSWORD
     port: "127.0.0.1:6379:6379"
     directories:
       - data:/data
